@@ -22,7 +22,7 @@ let currentUser = credentials[loggedInUser];
 updateSidebar();
 if (!currentUser) {
     // No user is logged in, redirect to the login page
-    window.location.href = 'chatbot.html';
+    window.location.href = 'index.html';
 }
 if (performance.navigation.type === 1) {
     // Page is being loaded for the first time
@@ -365,7 +365,7 @@ function updateSidebar() {
 function logout() {
     currentUser = null;
     // Redirect to the login page
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 function simulateTypings(sender, message, additionalClass = '') {
     const messageElement = document.createElement('div');
