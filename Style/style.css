@@ -1,0 +1,358 @@
+       body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #343541;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        a {
+  color:#37b3ed ;
+  text-decoration: none;
+}
+
+a:hover {
+  color:  #149ddd;
+  text-decoration: none;
+}
+
+        #container {
+            display: flex;
+            flex: 1;
+            position: relative;
+        }
+     
+          
+          .scroll-down-button {
+            /* Position the button at the bottom right corner */
+            position: fixed;
+            bottom: 89px;
+            right: 15px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            height: 35px;
+            width: 35px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+          }
+          
+
+   
+        #sidebar {
+    /* Existing styles */
+            width: 250px;
+            background-color: #000000;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+            transition: 0.3s;
+            display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+#sidebar-footer {
+    /* Existing styles */
+    width: 250px;
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    position: fixed;
+    height: 25%;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+#sidebar-footer .social-links {
+    margin-top: 83px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#sidebar-footer .social-links td {
+    padding: 7px;
+}
+
+#sidebar-footer .social-links img {
+    width: 20px; /* Adjust as needed */
+    height: auto;
+    border: #000000;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    filter: invert(100%);
+    padding: 7px;
+}
+
+
+#sidebar-footer p{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    margin-left: -23px;
+    text-align: center;
+    color: #ccc;
+    font-size: small;
+}
+
+
+
+#sidebar button.logout-button {
+    background-color: red; /* Set the background color to red */
+    color: white; /* Set the text color to white */
+    padding: 8px 15px; /* Adjust padding as needed */
+    border: none;
+    z-index: 3;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+#sidebar p {
+    margin: 0; /* Remove default margin for paragraphs */
+}
+ 
+
+        #chat-interface {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            position: relative;
+            margin-left: 0;
+            transition: margin-left 0.3s;
+        }
+
+        #chat-messages {
+            margin-bottom: 70px;
+            margin-top: 60px;
+            margin-left: 80px;
+            
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            margin-left: 300px;
+            margin-right: 120px;
+        }
+
+        .user-message {
+            background-color: #4CAF50;
+            color: #ffffff;
+            align-self: flex-end;
+            font-size: 20px;
+        }
+
+.bot-message {
+    background-color:#343541;
+    color: #ffffff;
+    align-self: flex-start;
+    word-wrap: break-word;
+    font-size: 20px;
+    overflow: hidden;
+        word-wrap: break-word;
+        max-width: 100%;
+        white-space: normal;
+        overflow: hidden;
+        margin-left: 300px;
+}
+
+        #input-area {
+            position: fixed;
+            bottom: 0;
+            left: 280px;
+            width: 75%;
+            display: flex;
+            background-color: #343541;
+            padding: 20px;
+            border-color: #ffffff7a;
+            border-top-style:solid;
+            border-width: 2px;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #send-button {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header-text {
+            margin-right: 770px; 
+            margin-top: 16px;/* Adjust the margin as needed */
+            font-size: 24px;
+        }
+
+        #header {
+            position: fixed;
+            top: -5px;
+            left: -5px;
+            width: 100%;
+            background-color: #343541;
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: #2c2d37;
+            border-width: 5px;
+            border-style: solid;
+        }
+      
+
+        #menu-btn {
+            cursor: pointer;
+            margin-top: 12px;
+            margin-left: 10px;
+            margin-bottom: 12px;
+            height: 30px;
+            width: 30px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+        }
+
+     
+        .bot-message.typing:after {
+            content: "|";
+            display: inline-block;
+            animation: blink-caret 0.75s infinite;
+        }
+
+        @keyframes blink-caret {
+            50% {
+                opacity: 0;
+            }
+        }
+        
+     
+.image-response {
+    margin-top: 20px; /* Adjust the margin as needed */
+    text-align: left;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    overflow: hidden; /* Ensure the border-radius is applied properly */
+}
+
+.image-response p {
+    margin: 0; /* Remove margin for the paragraph inside the image-response */
+}
+
+.image-response img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.download-button {
+    margin-top: 10px; /* Adjust the margin as needed */
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.orange-text {
+    color: orange;
+}
+
+        /* Media query for mobile view */
+        @media only screen and (max-width: 600px) {
+            #sidebar {
+                width: 80%;
+                left: -100%;
+                
+            }
+            #sidebar-footer {
+                width: 80%;
+                left: -100%;
+                
+            }
+            #chat-messages {
+                margin-bottom: 70px;
+                margin-top: 60px;
+                margin-left: -2px;
+            }
+            .scroll-down-button {
+                /* Position the button at the bottom right corner */
+                position: fixed;
+                bottom: 70px;
+                right: 15px;
+                background-color: #4CAF50;
+                color: #ffffff;
+                height: 35px;
+                width: 35px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 15px;
+              }
+        
+            .header-text {
+            margin-right: 120px; 
+            margin-top: 15px;/* Adjust the margin as needed */
+    
+        }
+        #sidebar-footer .social-links {
+            margin-top: 65px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .bot-message {
+        overflow: hidden;
+        word-wrap: break-word;
+        margin-left: 5px;
+        max-width: 90%;
+        white-space: normal; /* Change white-space property to normal */
+    }
+            .message {
+                margin-left: 0px;
+                font-size: 17px;
+                margin-right: -25px;
+            }
+            
+
+            #menu-btn {
+                display: block;
+            }
+
+            #input-area {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 95%;
+                display: flex;
+                background-color: #343541;
+                padding: 10px;
+                border-width: 2px;
+                border-color: #ffffff7a;
+                border-top-style:solid;
+            }
+
+            #container.open-sidebar #sidebar {
+                left: 0;
+            }
+            #container.open-sidebar #sidebar-footer {
+                left: 0;
+            }
+        }

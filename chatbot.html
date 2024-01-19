@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Style/style.css" rel="stylesheet">
+    <title>DocuGuardian by Akshay</title>
+</head>
+<body>
+
+    <div id="container">
+        <div id="sidebar">
+            User Information
+            <!-- Add more content to the sidebar if needed -->
+        </div>
+        <div id="sidebar-footer">
+            <table class="social-links">
+                <tr>
+                    <td><a href="https://github.com/yahskamrahs"><img src="icon/github.png" alt="Icon 1"></a></td>
+                    <td><a href="mailto:sharmaakshay0355@gmail.com"><img src="icon/gmail.png" alt="Icon 2"></a></td>
+                    <td><a href="https://www.instagram.com/yahska_amrahs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="icon/instagram.png" alt="Icon 1"></a></td>
+                    <td><a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEEKEX9ejJoXQAAAYzjyhVodzjyYHXtmiErk4L9bHjm2ZtpN8-sbf523Oi8zHBw7uHfUBUIjPaqUj5hRo-Aby3eUNZvV4BD1RVPyBeOg7szO8fO5uS9VON_0J57oI8sAS22_Yg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fakshaykumar-sharma-b803a6264%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app"><img src="icon/linkedin.png" alt="Icon 2"></a></td>
+                    <td><a href="https://twitter.com/yahskaamrahs"><img src="icon/twitter.png" alt="Icon 1"></a></td>
+                  <!-- Add more social icons in the same way -->
+                </tr>
+            </table>
+            <p>Developed by <a href="https://yahskamrahs.github.io/personal/">Akshay Sharma</a></p>
+        </div>
+        
+ 
+        <div id="chat-interface">
+            <div id="chat-messages"></div>
+            <button id="scrollDownButton" class="scroll-down-button" onclick="scrollToRecentBotMessage() ">
+                ↓ <!-- Downward arrow emoji -->
+              </button>
+        </div>
+    </div>
+
+    <div id="header">
+        <button id="menu-btn" onclick="toggleSidebar()">☰</button>
+        <div class="header-text">DocuGuardian</div>
+    </div>
+
+    <div id="input-area">
+        <input type="text" id="message-input" placeholder="Type your message..." onkeydown="handleKeyPress(event)">
+        <button id="send-button" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
