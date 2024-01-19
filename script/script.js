@@ -27,7 +27,7 @@ if (!currentUser) {
 if (performance.navigation.type === 1) {
     // Page is being loaded for the first time
     // Redirect the user to the login page
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
    
 }
 else{
