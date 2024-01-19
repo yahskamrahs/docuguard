@@ -22,7 +22,7 @@ let currentUser = credentials[loggedInUser];
 updateSidebar();
 if (!currentUser) {
     // No user is logged in, redirect to the login page
-    window.location.href = 'login.html';
+    window.location.href = 'chatbot.html';
 }
 if (performance.navigation.type === 1) {
     // Page is being loaded for the first time
