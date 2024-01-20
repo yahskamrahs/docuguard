@@ -9,7 +9,19 @@ body {
     flex-direction: column;
     height: 100vh;
 }
-
+a {
+    color:#37b3ed ;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color:  #149ddd;
+    text-decoration: none;
+  }
+p{
+    margin-top: 28px;
+    margin-bottom: -20px;
+}
 .login-container {
     display: flex;
     flex-direction: column;
