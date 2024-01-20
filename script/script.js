@@ -9,7 +9,7 @@ const loggedInUser = urlParams.get('user');
 const credentials = {
 'user1': { id:'234',password: 'pass123', name: 'Shahid Deshmukh',icard:'user1_aadhar.jpg',aadharb:'user1_aadhar.jpg',aadhar: 'user1_aadhar.jpg', pan: 'user1_pan.jpg', passbook: 'user1_passbook.jpg', electricity: 'user1_electricity.jpg', passport: 'user1_passport.jpg', income: 'user1_income.jpg', caste: 'user1_caste.jpg', nationality: 'user1_nationality.jpg', resident: 'user1_resident.jpg', bonafide: 'user1_bonafide.jpg', tenthtc: 'user1_tenthtc.jpg', twelthtc: 'user1_twelthtc.jpg', tenthmark: 'user1_tenthmark.jpg', twelthmark: 'user1_twelthmark.jpg', firstsem: 'user1_firstsem.jpg', secsem: 'user1_secsem.jpg', mscit: 'user1_mscit.jpg', cheque: 'user1_cheque.jpg' },
 'user2': { id:'876',password: 'pass456', name: 'Rizwan Quadri',aadhar: 'user1_aadhar.jpg', pan: 'user1_pan.jpg', passbook: 'user1_passbook.jpg', electricity: 'user1_electricity.jpg', passport: 'user1_passport.jpg', income: 'user1_income.jpg', caste: 'user1_caste.jpg', nationality: 'user1_nationality.jpg', resident: 'user1_resident.jpg', bonafide: 'user1_bonafide.jpg', tenthtc: 'user1_tenthtc.jpg', twelthtc: 'user1_twelthtc.jpg', tenthmark: 'user1_tenthmark.jpg', twelthmark: 'user1_twelthmark.jpg', firstsem: 'user1_firstsem.jpg', secsem: 'user1_secsem.jpg', mscit: 'user1_mscit.jpg', cheque: 'user1_cheque.jpg' },
-'yahska': { id:'513',password: 'akshay@123', name: 'Akshay Sharma',icard:'akshay_icard.jpg',adharb:'akshay_aadharb.jpg', aadhar: 'akshay_aadhar.jpg', pan: 'akshay_pan.jpg', passbook: 'akshay_passbook.jpg', electricity: 'akshay_electricity.jpg', passport: 'akshay_passport.jpg', income: 'akshay_income.jpg', caste: 'akshay_caste.jpg', nationality: 'akshay_nationality.jpg', resident: 'akshay_resident.jpg', bonafide: 'akshay_bonafide.jpg', tenthtc: 'akshay_tenthtc.jpg', twelthtc: 'akshay_twelthtc.jpg', tenthmark: 'akshay_tenthmark.jpg', twelthmark: 'akshay_twelthmark.jpg', firstsem: 'akshay_firstsem.jpg', secsem: 'akshay_secsem.jpg', mscit: 'akshay_mscit.jpg', cheque: 'akshay_cheque.jpg'},
+'yahska': { id:'513',password: '@KSH@Y', name: 'Akshay Sharma',icard:'akshay_icard.jpg',backadhar:'akshay_aadharb.jpg', aadhar: 'akshay_aadhar.jpg', pan: 'akshay_pan.jpg', passbook: 'akshay_passbook.jpg', electricity: 'akshay_electricity.jpg', passport: 'akshay_passport.jpg', income: 'akshay_income.jpg', caste: 'akshay_caste.jpg', nationality: 'akshay_nationality.jpg', resident: 'akshay_resident.jpg', bonafide: 'akshay_bonafide.jpg', tenthtc: 'akshay_tenthtc.jpg', twelthtc: 'akshay_twelthtc.jpg', tenthmark: 'akshay_tenthmark.jpg', twelthmark: 'akshay_twelthmark.jpg', firstsem: 'akshay_firstsem.jpg', secsem: 'akshay_secsem.jpg', mscit: 'akshay_mscit.jpg', cheque: 'akshay_cheque.jpg'},
 // Add more username-password-name-document pairs as needed
 };
 
@@ -37,7 +37,7 @@ if (currentUser) {
         <p>You can ask for the following documents:</p>
         <ul>
         <li><a href="#" onclick="requestDocument('aadhar')"><span class="orange-text">Aadhar Card</span></a></li>
-        <li><a href="#" onclick="requestDocument('aadharb')"><span class="orange-text">Backside Aadhar</span></a></li>          
+        <li><a href="#" onclick="requestDocument('backadhar')"><span class="orange-text">Backside Aadhar</span></a></li>          
         <li><a href="#" onclick="requestDocument('pan')"><span class="orange-text">PAN Card</span></a></li>
         <li><a href="#" onclick="requestDocument('passbook')"><span class="orange-text">Passbook</span></a></li>
         <li><a href="#" onclick="requestDocument('electricity')"><span class="orange-text">Electricity Bill</span></a></li>
@@ -252,8 +252,8 @@ case 'pan':
     documentImage = currentUser.pan;
     documentAlt = 'PAN';
     break;
-case 'aadharb':
-    documentImage = currentUser.backaadhar;
+case 'backadhar':
+    documentImage = currentUser.backadhar;
     documentAlt = 'Backside Aadhar';
     break;
 case 'icard':
